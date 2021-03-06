@@ -13,4 +13,4 @@ function verPrompt(){
         alert('No era cierto')
     }
 }
-// var verAlerta = () => {}
+// var verAlerta = (parametros) => { ejecución}
