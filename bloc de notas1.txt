@@ -1,0 +1,3 @@
+style="color: crimson;"
+style="width: 500px; height: 5px; background: black;"
+style="color: darkgreen;"

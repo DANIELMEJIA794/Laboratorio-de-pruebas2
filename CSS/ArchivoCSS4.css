@@ -1,0 +1,15 @@
+h1 {
+    background:url(../imagenes/Leon1.jpg);
+    height: 300px;
+    background-repeat:no-repeat;
+    background-attachment: scroll;
+}
+div p {
+    background:url(../imagenes/Leon2.jpg); 
+    height: 300px;
+    color: red;
+    background-repeat:no-repeat;
+    background-attachment: scroll;
+    background-position: center;
+}
+/*POR ALGUNA RAZÓN NO PUED COMBINAR EN BACKGROUND-POSITION DETALLES COMO BACKGROUND-POSITION: CENTER 1000px;*/

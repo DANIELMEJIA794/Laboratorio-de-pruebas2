@@ -1,0 +1,31 @@
+h1 a {
+    background-color: orange;
+}
+/*TENGO PROBLEMAS PARA CALCULAR UN MARGEN ACEPTABLE Y OBTENER UN EFECTO INLINE BLOCK VISIBLE EN LA PÁGINA*/
+div .uno {
+    width: 200px;
+    background: rgb(20, 50, 18);
+    color: white;
+    margin: 10px 10px;
+    padding: 30px;
+}
+div .dos {
+    width: 300px;
+    height: 300px;
+    background: rgb(20, 50, 18);
+    color: white;
+    margin: 10px 10px;
+    padding: 30px;
+}
+div .tres {
+    width: 350px;
+    height: 250px; 
+    background: rgb(20, 50, 18);
+    color: white;
+    margin: 10px 10px;
+    padding: 30px;
+    border:2px solid #909;
+}
+div {
+    display:inline-flex;
+}

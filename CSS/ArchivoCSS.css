@@ -1,0 +1,23 @@
+/*LOS SELECTORES POR ETIQUETA  SE EJECUTAN EN TODOS LOS ELEMENTOS CON LA MISMA ETIQUETA */
+
+h1, span {color: blueviolet; font-size: xx-large;}
+
+body
+    {
+    scroll-behavior: smooth;
+    scrollbar-face-color: #4042c7;
+    }
+
+
+/*LOS SELECTORES DE CLASE SE EJECUTAN CADA VEZ QUE LO COLOCO EN EL ATRIBUTO CLASS DE UN ELEMENTO*/
+.primeraClase {
+    color: red;
+    font-size: large;
+    padding: 50px;
+}
+
+/*LOS SELECTORES POR ID, SOLO SE EJECUTAN UNA VEZ*/
+#titulo{
+  background-color: fuchsia;
+  margin: 5px;
+}

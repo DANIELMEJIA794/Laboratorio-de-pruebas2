@@ -1,0 +1,8 @@
+body {
+    background:url(../imagenes/Leon4.jpg);
+    height: 200px;
+    width: 200px;
+    color: yellow;
+    background-repeat:repeat-y;
+    background-attachment:scroll;
+}

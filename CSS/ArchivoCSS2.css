@@ -1,0 +1,50 @@
+body {
+    background: white;
+    color: black;
+    margin: 0;
+    padding: 0;
+}
+h1{
+    font-size:50px;
+}
+h2 {
+    color: red;
+    font-size: 40px;
+}
+h3 {
+    font-size: 30px;
+}
+p {
+    color: blue;
+}
+a {
+    font-size: 20px;
+}
+p a {
+    font-size: 18px;
+}
+p span a {
+    font-size: 8px;
+}
+p .green {
+    color: orange;
+}
+a[href="www.microsoft.com"]{
+    color: rgb(26, 128, 0);
+    font-size: 30px;
+} 
+.tres {
+    font-size: 40px;
+}
+div p {
+    background: black;
+        color: white;
+        width: 50%;
+    font-size: 24px;
+}
+.cinco {
+   color: rgb(60, 10, 20, .8); 
+}
+.seis{
+    color: #aa14e5;
+}

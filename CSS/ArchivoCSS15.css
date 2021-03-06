@@ -1,0 +1,37 @@
+form {
+    background:khaki;
+    width:25%;
+    border:1px solid grey;
+    margin:20px;
+    padding: 20px;
+}
+label {
+    font-size:12px;
+    display:block;
+}
+textarea {
+    resize:horizontal;
+    max-height:300px;
+    min-height:100px;
+    /*REVISAR RESIZE:BOTH Y RESIZE:VERTICAL*/
+}
+input, textarea {
+    margin-bottom:20px;
+    width:100%;
+    padding:10px;
+    box-sizing:border-box;
+    border:1px solid black
+}
+input:focus, textarea:focus {
+    border: 1px solid blue;
+}
+input[type=submit] {
+    margin-bottom:0px;
+    background:blue;
+    color:white;
+    border:none;
+}
+input[type=submit]:hover {
+    background:red;
+    cursor:pointer;
+}

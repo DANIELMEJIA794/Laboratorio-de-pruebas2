@@ -1,0 +1,25 @@
+a {
+    font-size: 20px;
+    text-decoration:none;
+    padding: 10px 20px;
+    margin: 10px 10px 10px 10px;
+    float:left;
+}
+.uno:link {
+    color:aquamarine;
+    font-size:15px;
+}
+.dos:hover {
+    text-decoration:underline;
+    font-size: 30px;
+    background:black;
+    color:white;
+}
+.tres:active {
+    background:orange;
+}
+.cuatro:visited {
+    color:grey;
+    text-decoration:line-through;
+}
+/*POR ALGUNA RAZÓN NO ME SALE LA FUNCIÓN VISITED*/

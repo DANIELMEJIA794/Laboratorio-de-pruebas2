@@ -1,0 +1,55 @@
+h1 {
+    font-weight:normal;
+}
+h2 {
+    text-align:center;
+    background: grey
+}
+.uno{
+    color: rgb(350, 50, 90, 0.5);
+    font-family:"Tahoma" "Times New Roman";
+}
+.dos {
+    font-family:"Arial";
+}
+.tres {
+    font-size:45px;
+    font-weight: bold;
+}
+.cuatro {
+    text-align:right;
+}
+.cinco {
+    text-align:center;
+    /*CONSIDERAR OPCIONES TEXT-ALIGN:LEFT (ALINEACIÓN POR DESCARTE) Y TEXT ALIGN:RIGHT (HACIA LA DERECHA)*/
+}
+.seis {
+    line-height:40px;
+}
+.siete {
+    text-decoration:underline;
+}
+.ocho {
+    text-decoration:overline;
+}
+.nueve {
+    text-decoration:line-through;
+}
+.diez {
+    text-transform:capitalize;
+}
+.once {
+    text-transform:uppercase;
+}
+.doce {
+    text-transform:lowercase;
+}
+.trece {
+    letter-spacing:20px;
+}
+.catorce {
+    word-spacing:20px;
+}
+.quince {
+    text-shadow:5px 5px 5px grey;
+}

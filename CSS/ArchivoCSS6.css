@@ -1,0 +1,17 @@
+div {
+    height:100px;
+    width:100px;
+    background: blue;
+    color: white;
+    font-size: 30px;
+    float: left;
+    /*TAMBIÉN EXISTE LA POSIBILIDAD DE FLOAT: RIGHT;*/
+    position:relative;
+}
+.caja {
+    position:static;
+    top: 100px;
+    right: 0px;
+    left: 0px;
+    bottom: 300px;
+}

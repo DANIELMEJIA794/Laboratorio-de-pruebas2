@@ -1,0 +1,9 @@
+body {
+    background:url(../imagenes/Leon5.jpg);
+    background-color: blue;
+    color: black;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    background-position: 100px 100px;
+}
+/*NO OLVIDAR QUE SE PUEDE PONER EN BACKGROUND-POSITION LA OPCIÓN: 50% 0 PARA CENTRAR LA IMAGEN DE FONDO*/

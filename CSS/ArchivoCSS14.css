@@ -1,0 +1,18 @@
+table {
+    border:1px solid black;
+    border-collapse:collapse;
+    /*TAMBIÉN EXISTE LA OPCIÓN SEPARATION*/
+    /*SE PUEDEN AÑADIR WIDTH Y HEIGHT*/
+}
+table td {
+    border: 1px solid black;
+    padding: 20px;
+}
+table tr:hover {
+    background:grey;
+
+}
+table td:hover {
+    background: black;
+    color: white;
+}
