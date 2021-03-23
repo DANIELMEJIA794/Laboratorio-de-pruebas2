@@ -1,0 +1,360 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+.primera {
+    margin:0;
+    padding:0;
+}
+body {
+    background:#e6e6e6;
+}
+header, .main, footer {
+    color:white;
+    width:100%;
+    max-width:1000px;
+    margin: 20px auto;
+}
+header nav {
+    height:auto;
+    width:90%;
+    padding:0;
+    background-color:black;
+    color:white;
+    list-style:none;
+    text-align:center;
+    display:inline-block;
+    overflow:hidden;
+}
+header nav ul {
+    color:white;
+    margin-right:5px;
+    padding: 10px;
+    text-decoration:none;
+    display:block;
+    text-align:center;
+    margin:auto;
+    }
+header nav ul li {
+    text-decoration:none;
+    display:block;
+   }
+header nav ul li a {
+    padding: 10px 20px;
+    margin-right:5px;
+    display:block;
+    text-align:center;
+    text-decoration:none;
+    color:white;
+    border: 1px solid grey;
+    position:relative;
+    /*CONTINUÁN LOS PROBLEMAS PARA CREAR UNA SIDEBAR FUNCIONAL*/
+}
+header nav ul li a:hover {
+    background: #ef8354;
+}
+header nav .menu {
+    display:flex;
+    padding:10px 20 px;
+    margin-right:5px;
+    color:white;
+    text-align:center;
+}
+header nav .menu:hover {
+    display:flex;
+    position:relative;
+    overflow-y:visible;
+}
+header nav .menu:hover a {
+    display:block;
+    position:relative;
+    overflow-y:visible;
+}
+header nav .item {
+    padding:10px 20px;
+    margin-right:5px;
+    display:none;
+    text-align:center;
+}
+header nav .item a {
+    display:block;
+}
+header nav .item:hover a {
+    display:block;
+}
+header nav .subitem {
+    display:none;
+    padding:10px 20px;
+    margin-right:5px;
+    text-align:center;
+}
+header nav .subitem:hover {
+    display:block;
+}
+header nav .subitem:hover a {
+    display:block;
+}
+header .Autor1 .Autor2 .Autor3 .Autor4 .Autor5 {
+    text-align:bottom;
+}
+.main .articles {
+    width: 98%;
+    margin-left:2%;
+    padding:20px;
+    background: white;
+    color: black;
+    box-sizing:border-box;
+    display:inline;
+}
+.main .catalogo .article .span {
+    width: 90%;
+    height:90%;
+    padding: 40px;
+    margin: 8px;
+    box-sizing:border-box;
+    float:left;
+}
+.main article div .catalogo{
+    background:white;
+    color:black;
+    width:100%;
+    height:auto;
+    padding:10px 5px 10px 5px;
+    display: inline-flex;
+}
+.main article div span {
+    width:80px;
+    height:80px;
+    padding:40px 40px;
+    margin: 5px;
+    border: 5px solid white;
+    float:left;
+}    
+.main article div img :hover{
+    background: #75acec;
+}
+main article div img .foto1 {
+    padding:10px;
+    margin:5px;
+    border:2px solid black; 
+    float:left;
+}
+main article div img .foto2 {
+    padding:10px;
+    margin:5px;
+    border:2px solid black;
+    float: left; 
+}
+ main article div img .foto3 {
+    padding:10px;
+    margin:5px;
+    border:2px solid black;
+    float:left; 
+}
+main article div img .foto4 {
+    padding: 10px;
+    margin: 5px;
+    border: 2px solid black;
+    float:left; 
+}
+main article div img .foto5 {
+    padding: 10px;
+    margin: 5px;
+    border: 2px solid black;
+    float:left; 
+}                
+footer {
+    background: black;
+    color: white;
+    clear:both;
+    padding:10px 0px;
+}
+.segunda {
+    margin:0;
+    padding:0;
+}
+body {
+    background: #e6e6e6;
+}
+header, .main, footer {
+    color: #fff;
+    width:90%;
+    max-width:1000px;
+    margin: 20px auto;
+}
+header nav {
+    display: flex;
+    color: #5289D5;
+    overflow:hidden;
+}
+header nav ul {
+    list-style:none;
+}
+header nav ul li {
+    float:left;
+    list-style:none;
+}
+header nav ul li a {
+    padding: 10px 20px;
+    display:none;
+    color:white;
+    text-decoration:none;
+    float:left;
+    /*CONTINUÁN LOS PROBLEMAS PARA CREAR UNA SIDEBAR FUNCIONAL*/
+}
+header nav ul li a:hover {
+    background: #75acec;
+}
+.main .articles .primera {
+    width:50%;
+    height:60%;
+    margin:15px;
+    float:inline-flex;
+    background:white;
+    color:auto;
+    padding: 40px 40px;
+}
+.main .articles article .foto1 {
+    padding:20px;
+    background:white;
+    margin-bottom:20px;
+    image-orientation: center;
+}
+aside .text {
+    width: 50%;
+    float: left;
+    background:orange;
+    padding:20px;
+    box-sizing:border-box;
+}
+footer {
+    background: black;
+    color: white;
+    clear:both;
+    padding:10px 0px;
+}
+.tercera {
+    margin:0;
+    padding:0;
+}
+body {
+    background: #e6e6e6;
+}
+header, .main, footer {
+    color: #fff;
+    width:90%;
+    max-width:1000px;
+    margin: 20px auto;
+}
+header nav {
+    display: flex;
+    color: #5289D5;
+    overflow:hidden;
+}
+header nav ul {
+    list-style:none;
+}
+header nav ul li {
+    float:left;
+    list-style:none;
+}
+header nav ul li a {
+    padding: 10px 20px;
+    display:none;
+    color:white;
+    text-decoration:none;
+    float:left;
+    /*CONTINUÁN LOS PROBLEMAS PARA CREAR UNA SIDEBAR FUNCIONAL*/
+}
+header nav ul li a:hover {
+    background: #75acec;
+}
+.main .articles {
+    width:68.5%;
+    margin-right:1.5%;
+    float:left;
+    background:white;
+    color:black
+}
+.main .articles article {
+    padding:20px;
+    background:white;
+    margin-bottom:20px;
+}
+aside {
+    width: 30%;
+    float: left;
+    background:orange;
+    padding:20px;
+    box-sizing:border-box;
+}
+footer {
+    background: black;
+    color: white;
+    clear:both;
+    padding:10px 0px;
+}
+.cuarta {
+    margin:0;
+    padding:0;
+}
+body {
+    background: #e6e6e6;
+}
+header, .main, footer {
+    background-color:white;
+    color: black;
+    width:90%;
+    max-width:1000px;
+    margin: 20px auto;
+}
+header nav {
+    display: flex;
+    color: black;
+    overflow:hidden;
+}
+header nav ul {
+    list-style:none;
+}
+header nav ul li {
+    float:left;
+    list-style:none;
+}
+header nav ul li a {
+    padding: 10px 20px;
+    display:block;
+    color:white;
+    text-decoration:none;
+    float:left;
+    /*CONTINUÁN LOS PROBLEMAS PARA CREAR UNA SIDEBAR FUNCIONAL*/
+}
+header nav ul li a:hover {
+    background: #75acec;
+}
+.main .articles {
+    width:68.5%;
+    margin-right:1.5%;
+    float:left;
+    background:white;
+    color:black
+}
+.main .articles article {
+    padding:20px;
+    background:white;
+    margin-bottom:20px;
+}
+aside {
+    width: 30%;
+    float: left;
+    background:orange;
+    padding:20px;
+    box-sizing:border-box;
+}
+footer {
+    background: black;
+    color: white;
+    clear:both;
+    padding:10px 0px;
+    text-align: center;
+}

@@ -1,0 +1,234 @@
+<html>
+    <head>
+        <title>Archivo 2P de prueba de Css</title>
+    </head>
+    <link rel="stylesheet" href="ArchivoCSS16.css" content="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <body>
+        <header>
+            <div class="logotipo">
+            <img src="../imagenes/Leon3.jpg" width="100%" height="100px" alt="">
+             <nav>
+                <ul>
+                <li><a onclick="irPrimera()" a href="#">Inicio</a></li>
+                <li><a onclick="irSegunda()" a href="#">Acerca de</a></li>
+                <li><a href="#" class="Menu">Servicios</a>
+                <ul>
+                    <li class="item"><a href="#">AUTORES</a>
+                        <ul>
+                            <li class="subitem"><a href="#">AUTOR 1</a></li>
+                            <li class="subitem"><a href="#">AUTOR 2</a></li>
+                            <li class="subitem"><a href="#">AUTOR 3</a></li>
+                            <li class="subitem"><a href="#">AUTOR 4</a></li>
+                            <li class="subitem"><a href="#">AUTOR 5</a></li>
+                        </ul>
+                    </li class="item">
+                    <li class="item"><a href="#">CATEGORÍA</a> 
+                        <ul>
+                            <li class="subitem"><a href="#">NOVELA</a></li>
+                            <li class="subitem"><a href="#">CRÓNICA</a></li>
+                            <li class="subitem"><a href="#">DEPORTE</a></li>
+                        </ul>
+                    </li class="item">
+                </ul>
+                </li class="menu">
+                <li><a onclick="irCuarta()" a href="#">Contacto</a></li>
+                <li><a href="#" class="glyphicon glyphicon-search"></a></li>
+            </nav>
+            <!-- PONER AQUÍ LA SIDEBAR DE AUTORES O DE LIBROS, DE SER POSIBLE PONER DOS OPCIONES: UNA PARA AUTORES Y OTRA PARA LIBROS-->
+            <!-- </div> -->
+        </header>
+        <div class="catalogo">
+        <section class="main" id="primera" style="display: inline-flex;">
+            <section class="articles">
+            <p class="portada"><h2>PORTADA</h2></p>
+            <article>              
+            <span><img class="foto1.jpg" img src="../imagenes2/portada_fantasmas.jpg">
+            <p><a href="#" class="Autor1">AUTOR 1</a></p>
+            </span>
+            <span><img class="foto2.jpg" img src="../imagenes2/portada_la-buena-cocina.jpg">
+            <p><a href="#" class="Autor2">Autor 2</a></p>
+            </span>
+            <span><img class="foto3.jpg" img src="../imagenes2/portada_las-palabras-que-nunca-escribi.jpg">
+            <p><a href="#" class="Autor3">Autor 3</a></p>
+            </span>
+            <span><img class="foto4.jpg" img src="../imagenes2/portada_respira.jpg">
+            <p><a href="#" class="Autor4">Autor 4</a></p>
+            </span>
+            <span><img class="foto5.jpg" img src="../imagenes2/portada_verguenza.jpg">
+            <p><a href="#" class="Autor5">Autor 5</a></p>
+            </span>
+            </article>
+            </div>
+            </section>  
+        <section class="main" id="segunda" style="display: none;">
+            <p>Acerca de</p>
+            <section class="articles">
+            <article>
+                <p ></p>
+                <!-- AQUÍ DEBE IR LA IMAGEN DE LA CARÁTULA DEL LIBRO--->
+            </article>
+            </section>
+            <aside>
+            </aside>
+                        <!--EN EL PRIMER ASIDE DEBE IR EL RESUMEN DEL LIBRO, NO EN ARTICLE-->
+                <!--CREAR UN ENLACE HACIA EL CURRÍCULO DEL AUTOR-->
+        </section>
+        <section class="main" id="tercera" style="display: none;">
+            <p>Servicios</p>
+            <section class="articles">
+            <article>
+            <p></p>
+            </article>
+            </section>
+            <aside>                
+            </aside>
+            </h4>
+        </section>
+        <section class="main" id="cuarta" style="display: none;">
+            <p>Contacto</p>
+            <section class="articles">
+            <article>
+            <p></p>
+            </article>
+            </section>
+            <aside>               
+            </aside>
+        </section>
+        <!--EN CONTACTO VA EL FORMULARIO-->
+        <section class="main" id="quinta" style="display: none;">
+            <section class="articles">
+            <article>
+            <p><img src=../imagenes/foto1.jpg></img></p>
+            </article>
+            </section>
+            <section>
+            <aside>
+            <h3>Este es el título de mi sidebar</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita voluptates inventore labore quidem aspernatur a cum consequatur nulla repellendus nobis consectetur omnis similique, sit illum minus voluptate, fuga dolorem esse.</p>
+            </aside>
+            </section>
+        <section class="main" id="sexta" style="display: none;">
+            <section class="articles">
+            <article>
+            <p><img src="../imagenes/foto2.jpg"></img></p>
+            </article>
+            </section>
+            <aside>
+            <h3>Este es el título de mi sidebar</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita voluptates inventore labore quidem aspernatur a cum consequatur nulla repellendus nobis consectetur omnis similique, sit illum minus voluptate, fuga dolorem esse.</p>
+            </aside>
+            </section>
+        <section class="main" id="septima" style="display: none;">
+            <section class="articles">
+            <article>
+            <p><img src="../imagenes/foto3.jpg"></p>
+            </article>
+            </section>
+            <aside>
+            <h3>Este es el título de mi sidebar</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita voluptates inventore labore quidem aspernatur a cum consequatur nulla repellendus nobis consectetur omnis similique, sit illum minus voluptate, fuga dolorem esse.</p>
+            </aside>
+        </section>
+        <section class="main" id="octava" style="display: none;">
+            <section class="articles">
+            <article>
+            <p><img src="../imagenes/foto4.jpg"></p>
+            </section>
+            <aside>
+            <h3>Este es el título de mi sidebar</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita voluptates inventore labore quidem aspernatur a cum consequatur nulla repellendus nobis consectetur omnis similique, sit illum minus voluptate, fuga dolorem esse.</p>
+            </aside>
+        </section>
+        <section class="main" id="novena" style="display: none;">
+            <section class="articles">
+            <article>
+            <p><img src="../imagenes/foto5.jpg"></p>
+            </article>
+           </section>
+            <aside>
+            <h3>Este es el título de mi sidebar</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita voluptates inventore labore quidem aspernatur a cum consequatur nulla repellendus nobis consectetur omnis similique, sit illum minus voluptate, fuga dolorem esse.</p>
+            </aside>
+        </section>
+        <footer>
+            <p>Copyright | 2021</p>
+        </footer>
+        <!--<b>
+            <p><h2>Fantasmas</h2></p>
+            <p><h3><b>El amor en los tiempos del ghosting</b></h3></p>
+            <p><b>Dolly Alderton</b></p>
+            <pre>    
+            ¿Tu vida a los treinta no es la que imaginaste?
+
+            Descubre la novela que habla de ti.
+
+            Nina y Lola son dos amigas de treinta y pocos: independientes y con éxito profesional, tienen la sensación que se están quedando atrás mientras sus amigas se casan y tienen hijos, pero tampoco quieren perder su libertad ni quedarse con el primer tipo que aparezca. Cuando Nina conoce a Max a través de una app de citas recupera la confianza en el amor, pero tras unos meses maravillosos, Max desparece de su vida en el momento álgido de su relación.
+
+            Divertida, tierna y con el punto justo de tristeza, la primera novela de Dolly Alderton brilla por sus observaciones inteligentes sobre el amor, la madurez, la identidad, la familia y los amigos.
+
+            Una novela sobre el amor en los tiempos del ghosting. 
+
+            <p>¿Tu vida a los treinta no es la que imaginaste?
+
+            Descubre la novela que habla de ti.</p>
+            </pre>
+            </h3>
+
+            <p><h2>>b>La buena cocina</b></h2></p>
+            <p><h4>900 recetas que siempre salen bien</h4></p>
+            <pre>
+            Karlos Arguiñano
+            
+            <h2><b>El nuevo recetario de Karlos Arguiñano reivindica la auténtica cocina de toda la vida y la importancia de saber escoger los ingredientes</h2></b>
+
+            <h3>El arte de escoger y mezclar bien los ingredientes es uno de los secretos mejor guardados de la buena cocina. Su éxito depende de una variedad de texturas y sabores que, bien combinados, pueden tener un resultado explosivo. En este nuevo recetario de Karlos Arguiñano descubrirás qué ingredientes usar en tu día a día cuidando tu salud y con lo que tengas más a mano en la despensa o el frigorífico. Con un práctico índice de sugerencias clasificadas por ingredientes, estas 900 recetas superdeliciosas y fáciles te permitirán preparar completos menús que incluyen legumbres, carnes y aves, verduras y hortalizas, pescados, huevos, cereales, frutas y postres.
+
+            Lentejas con calabacín y bolitas de boniato, boquerones a la sidra con ensalada de patata o flan de puerros y gambas. Platos de sencilla elaboración que siempre salen bien, auténticos y saludables, para disfrutar de la buena cocina caser</h4>
+            </pre>
+
+            <p><h2><b>Las palabras que nunca escribí</b><h2></p>
+            <p><h3>Jane Thynne</h3></p>
+            <pre>
+            <h2><b>Una apasionante novela de secretos familiares en el marco de la Segunda Guerra Mundial.</b></h2>
+
+            Nueva York, en la actualidad: por capricho, la joven Juno Lambert compra una máquina de escribir Underwood de 1931 que perteneció a la célebre periodista Cordelia Capel. Dentro de su estuche descubre una novela inacabada que la lleva a viajar al otro lado del atlántico para llenar los vacíos que encuentra en la historia de Cordelia y de su hermana, y con la esperanza de descubrir el secreto que dividió a las hermanas en medio de la agitación del amor, el espionaje y la guerra. En este vívido retrato del Berlín nazi, desde su alta sociedad hasta su devastadora caída, Jane Thynne examina las verdades que a veces no nos atrevemos a decirnos.
+
+            Un descubrimiento casual dentro del estuche de una máquina de escribir vintage revela la emocionante historia de dos hermanas separadas por la Segunda Guerra Mundial.
+            </pre>
+
+            <p><h2>Respira</p>></h2>
+            <p><h3>La nueva ciencia de un arte olvidado</h3></p>
+            <p>James Nestor>/p>
+            <pre>
+            <h2><b>No importa lo que comas ni cuánto ejercicio hagas. Tu salud depende esencialmente de la manera en que respiras. Y lo estás haciendo mal.</b></h2>
+
+            «Si respiras, necesitas leer este libro.» Wallace Nichols
+
+            «Un libro transformador que va a cambiar completamente la manera en la que pensamos en nuestro cuerpo y nuestra mente.» Joshua Foer
+
+            ¿Sabías que de las 5.400 especies de mamíferos somos la única que tiene los dientes torcidos? Hace 150 años el ser humano dejó de masticar, y con ello no solo se inició un proceso de deformación de nuestras mandíbulas, sino que empezamos a respirar por la boca en lugar de por la nariz.
+
+            En este apasionante libro, que ya ha seducido a millones de lectores en todo el mundo, descubriremos que los humanos llevamos cerca de dos siglos involucionando y las graves consecuencias que ello tiene en nuestra salud física y mental. Aprenderemos cómo podemos revertir esta situación y acabar para siempre con los problemas de sueño, ronquidos y dolor de espalda, reducir el estrés, disfrutar más del sexo y prevenir el envejecimiento.  
+
+            <b>No importa lo que comas ni cuánto ejercicio hagas; da igual que seas joven, fuerte e inteligente. Tu salud depende esencialmente de la manera en que respiras. Y lo estás haciendo mal.</b>
+            </pre>
+            
+            <p><h2><b>¡Vergüenza!</b></h2></p>
+            <p><h4>El escándalo de las residencias</h4></p>
+            <p>Manuel Rico</p>
+            <pre>
+            <h2><b>El escándalo de las residencias. Los fondos y sus trampas fiscales. El poder de la Iglesia. La Administración ausente.</h3></b>
+
+            Este libro indaga en el lado más amargo de la pandemia por COVID-19: las más de veinte mil muertes en residencias. Funerarias sobrepasadas, ancianos que morían solos… ¿Cómo fue posible el desastre de la primavera de 2020? ¿Qué causas provocaron el contagio masivo en las residencias?
+
+            Manuel Rico, director de investigación de infoLibre, desvela, con datos oficiales inéditos, quiénes se enriquecen con el cuidado de nuestros mayores y la desidia de las Administraciones para inspeccionar las residencias y sancionar a las empresas que se saltan la ley.
+
+            ¡Vergüenza! es un manual imprescindible para que los políticos y la sociedad tomen conciencia de que son necesarias reformas urgentes que eviten una repetición de la gran vergüenza de la primavera de 2020. Una obra de actualidad que desnuda un escándalo social, moral, político y empresarial.
+
+            <b>El escándalo de las residencias. Los fondos y sus trampas fiscales. El poder de la Iglesia. La Administración ausente.</b>
+            </pre>    
+    </body>
+</html>
