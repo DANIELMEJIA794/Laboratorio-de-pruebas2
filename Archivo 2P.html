@@ -9,60 +9,46 @@
     <body>
         <header>
             <div class="logotipo">
-            <img src="../imagenes/Leon3.jpg" width="100%" height="100px" alt="">
+            <img src="../imagenes/Leon3.jpg" width="50%" height="50%" alt="">
              <nav>
                 <ul>
-                <li><a onclick="irPrimera()" a href="#">Inicio</a></li>
-                <li><a onclick="irSegunda()" a href="#">Acerca de</a></li>
-                <li><a href="#" class="Menu">Servicios</a>
-                <ul>
-                    <li class="item"><a href="#">AUTORES</a>
-                        <ul>
-                            <li class="subitem"><a href="#">AUTOR 1</a></li>
-                            <li class="subitem"><a href="#">AUTOR 2</a></li>
-                            <li class="subitem"><a href="#">AUTOR 3</a></li>
-                            <li class="subitem"><a href="#">AUTOR 4</a></li>
-                            <li class="subitem"><a href="#">AUTOR 5</a></li>
-                        </ul>
-                    </li class="item">
-                    <li class="item"><a href="#">CATEGORÍA</a> 
-                        <ul>
-                            <li class="subitem"><a href="#">NOVELA</a></li>
-                            <li class="subitem"><a href="#">CRÓNICA</a></li>
-                            <li class="subitem"><a href="#">DEPORTE</a></li>
-                        </ul>
-                    </li class="item">
-                </ul>
-                </li class="menu">
+                <li><a onclick="irPrimera()"  href="#">Inicio</a></li>
+                <li><a onclick="irSegunda()"  href="#">Acerca de</a></li>
+                <li><a onclick="mostrarListas(Listautores)" href="#" class="Menu">Servicios</a>
+                    <ul id="Listautores" style="display: none; color: back">
+                        <li><a href="#">AUTOR 1</a></li>
+                        <li><a href="#">AUTOR 2</a></li>
+                        <li><a href="#">AUTOR 3</a></li>
+                        <li><a href="#">AUTOR 4</a></li>
+                        <li><a href="#">AUTOR 5</a></li>
+                    </ul>
+                </li>
                 <li><a onclick="irCuarta()" a href="#">Contacto</a></li>
                 <li><a href="#" class="glyphicon glyphicon-search"></a></li>
             </nav>
             <!-- PONER AQUÍ LA SIDEBAR DE AUTORES O DE LIBROS, DE SER POSIBLE PONER DOS OPCIONES: UNA PARA AUTORES Y OTRA PARA LIBROS-->
             <!-- </div> -->
         </header>
-        <div class="catalogo">
-        <section class="main" id="primera" style="display: inline-flex;">
-            <section class="articles">
-            <p class="portada"><h2>PORTADA</h2></p>
-            <article>              
-            <span><img class="foto1.jpg" img src="../imagenes2/portada_fantasmas.jpg">
-            <p><a href="#" class="Autor1">AUTOR 1</a></p>
-            </span>
-            <span><img class="foto2.jpg" img src="../imagenes2/portada_la-buena-cocina.jpg">
-            <p><a href="#" class="Autor2">Autor 2</a></p>
-            </span>
-            <span><img class="foto3.jpg" img src="../imagenes2/portada_las-palabras-que-nunca-escribi.jpg">
-            <p><a href="#" class="Autor3">Autor 3</a></p>
-            </span>
-            <span><img class="foto4.jpg" img src="../imagenes2/portada_respira.jpg">
-            <p><a href="#" class="Autor4">Autor 4</a></p>
-            </span>
-            <span><img class="foto5.jpg" img src="../imagenes2/portada_verguenza.jpg">
-            <p><a href="#" class="Autor5">Autor 5</a></p>
-            </span>
-            </article>
-            </div>
-            </section>  
+            <section class="main" id="primera">
+                <h2 class="portada"><h2>PORTADA</h2></p>
+                <article class="articles">              
+                    <span><img class="fotos" src="../imagenes2/portada_fantasmas.jpg">
+                    <p><a href="#" class="Autor1">AUTOR 1</a></p>
+                    </span>
+                    <span><img class="fotos" src="../imagenes2/portada_la-buena-cocina.jpg">
+                    <p><a href="#" class="Autor2">Autor 2</a></p>
+                    </span>
+                    <span><img class="fotos" src="../imagenes2/portada_las-palabras-que-nunca-escribi.jpg">
+                    <p><a href="#" class="Autor3">Autor 3</a></p>
+                    </span>
+                    <span><img class="fotos" src="../imagenes2/portada_respira.jpg">
+                    <p><a href="#" class="Autor4">Autor 4</a></p>
+                    </span>
+                    <span><img class="fotos" src="../imagenes2/portada_verguenza.jpg">
+                    <p><a href="#" class="Autor5">Autor 5</a></p>
+                    </span>
+                </article>
+           </section>    
         <section class="main" id="segunda" style="display: none;">
             <p>Acerca de</p>
             <section class="articles">
@@ -78,15 +64,28 @@
         </section>
         <section class="main" id="tercera" style="display: none;">
             <p>Servicios</p>
-            <section class="articles">
             <article>
-            <p></p>
+                <ul>
+                    <li class="item" onclick="mostrarListas(Listautores)"><a href="#">AUTORES</a>
+                        <ul id="Listautores" style="display: none;">
+                            <li class="subitem"><a href="#">AUTOR 1</a></li>
+                            <li class="subitem"><a href="#">AUTOR 2</a></li>
+                            <li class="subitem"><a href="#">AUTOR 3</a></li>
+                            <li class="subitem"><a href="#">AUTOR 4</a></li>
+                            <li class="subitem"><a href="#">AUTOR 5</a></li>
+                        </ul>
+                    </li>
+                    <li class="item" onclick="mostrarListas(LisCat)"><a href="#">CATEGORÍA</a> 
+                        <ul id= "LisCat" style="display: none;">
+                            <li class="subitem"><a href="#">NOVELA</a></li>
+                            <li class="subitem"><a href="#">CRÓNICA</a></li>
+                            <li class="subitem"><a href="#">DEPORTE</a></li>
+                        </ul>
+                    </li class="item">
+                </ul>
             </article>
-            </section>
-            <aside>                
-            </aside>
-            </h4>
         </section>
+    
         <section class="main" id="cuarta" style="display: none;">
             <p>Contacto</p>
             <section class="articles">
@@ -229,6 +228,7 @@
             ¡Vergüenza! es un manual imprescindible para que los políticos y la sociedad tomen conciencia de que son necesarias reformas urgentes que eviten una repetición de la gran vergüenza de la primavera de 2020. Una obra de actualidad que desnuda un escándalo social, moral, político y empresarial.
 
             <b>El escándalo de las residencias. Los fondos y sus trampas fiscales. El poder de la Iglesia. La Administración ausente.</b>
-            </pre>    
-    </body>
+            </p> -->    
+            <script src="ArchivoJavaScript.js" type="text/javascript"></script>
+        </body>
 </html>
