@@ -33,12 +33,9 @@ function irCuarta(){
 }
 
 function mostrarListas(listas){
+    console.log('que cuernitos?');
     //operador ternario:    condicion ? primera sentencia : segunda sentencia;
-    if(listas.style.display === 'block'){
-        listas.style.display = 'none'} else{
-            listas.style.display = 'flex';
-            listas.style = 'flex-direction: columns';
-        }
+    listas.style.display === 'block'?listas.style.display = 'none': listas.style.display = 'block';
 }
 
 
