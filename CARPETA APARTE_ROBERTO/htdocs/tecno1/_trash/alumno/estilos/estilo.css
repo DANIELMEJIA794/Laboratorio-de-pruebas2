@@ -1,0 +1,30 @@
+body {
+    background-color: white;
+  }
+  
+  h1 {
+    font-family: Tahoma;
+    color: red;
+    font-size: 25;
+  }
+  
+    h2 {
+    font-family: Tahoma;
+    color: red;
+    font-size: 20;
+  }
+  
+  
+  p {
+  align: justify;
+      font-family: Arial;
+    background-color: white;
+    font-size: 16;
+  }
+  
+  hr
+    {
+
+    color: green;
+
+  }

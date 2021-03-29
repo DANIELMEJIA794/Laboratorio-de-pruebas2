@@ -1,15 +1,12 @@
-var nombre = "Arturo";
+var nombre = prompt('¿Cual es tu nombre?').toUpperCase();
 var edad = 19;
-if ( nombre == "Carlos" ) {
+if ( nombre == "CARLOS" ) {
     document.write("Bienvenido " + nombre);
-}
-/*else {
-    document.write("Bienvenido, anónimo");
-} else if ( nombre == "Arturo"); {
+} else if ( nombre == "Arturo") {
     document.write("Bienvenido Arturo");
 } else {
-    document.write("Bienvenido Carlos");
-}/*
+    document.write("Bienvenido, anónimo");
+}
 
 //NO ME SALE EL ELSE IF
 

@@ -1,0 +1,87 @@
+﻿<?php
+include ("configuracion.php");
+?>
+<html>
+	<head>
+	<meta charset="utf-8"/>
+	<meta name="description" content="Universidad Nacional Mayor San Marcos"/>
+	<meta name="keywords" content="univesidad, Peru, university"/>
+	<meta name="author" content="Celso Gonzales" />
+	<meta name="copyright" content="Propietario del copyright" />
+	<meta name="robots" content="index"/>
+	<meta http-equiv="cache-control" content="no-cache"/>
+	<meta http-equiv="expires" content="300000"/>
+	<meta http-equiv="expires" content="Sat, 07 Feb 2016 00:00:00 GMT"/>
+<!--	<meta http-equiv="refresh" content="10; url=http://www.unmsm.edu.pe/"/> -->
+
+	<link rel="stylesheet" href="font-awesome.min.css"> <!-- Tipo de Fuente -->
+	<link rel="stylesheet" href="menu.css"> <!-- Tipo de Fuente -->
+   <script type="text/javascript" src="menu.js"></script>
+
+
+	<title> </title>
+	</head>
+	
+	<body bgcolor="black">
+    
+	<table cellpadding="0" cellspacing="0" width="100%">
+	<tr><td width="150" align="top" valign="top">
+	<img src="http://unmsm.asterisk.education/filegator/19030111/web/plantilla_parcial/netflix.png" width="200" height="50"></td>
+	<td width="800">
+	<!-- aqui empieza el menu  -->
+	<div class="navbar">
+  <a href="index.php">Inicio</a>
+  <a href="tipo.php?tipo=Pelicula">Peliculas</a>
+  <div class="dropdown">
+  <button class="dropbtn" onclick="myFunction('1')">Series
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-content" id="1">
+    <a href="">Terror</a>
+    <a href="#">Ciencia Ficción</a>
+    <a href="#">Románticas</a>
+  </div>
+
+ </div>
+	    <a href="formulario.php">Ingresar</a>
+  
+</div>
+	<!-- aqui termina el menu  -->
+	<td>
+<!-- AQUI APARECE EL ENCABEZADO -->
+
+<form action="buscar.php" method="post">
+<table  width="100%"<tr><td valign="middle">
+
+<input type="text" size="20" name="termino">
+<input type="submit" value=" Buscar ">
+
+</td></tr>
+</table>
+</form>
+</td></tr>
+</table>
+<!---------Parte necesaria de modifación-->
+<form action="ingresar.php" method="post" enctype="multipart/form-data">
+		<p>Película: <input type="text" name="pelicula"></p>
+		<p>Resumen: <input type="text" name="resumen"></p>
+		<p>Portada: <input type="file" name="portada" size=25></p>
+		<p>Tipo:<select name="tipo"></p>
+		<option value="Pelicula">Pelicula</option>
+		<option value="Serie">Serie</option>
+		</select><br>
+		<p>Clasificación: <select name="clasificacion"></p>
+		<option value="Romántica">Romántica</option>
+		<option value="Terror">Terror</option>
+		<option value="Ciencia Ficción">Ciencia Ficción</option>
+		</Select><br>
+		<p>Codigo Alumno <input type="text" name="codigo" ></p><br>
+		<p><input type="submit" value="Ingresar Datos" size=25>
+		</font>
+		</form>
+</p>
+</td></tr>
+</table>
+<?php
+include ("pie.php");
+?>

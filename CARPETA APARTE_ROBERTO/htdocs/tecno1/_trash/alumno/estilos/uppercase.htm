@@ -1,0 +1,8 @@
+
+    <script src="uppercase.js" type="text/javascript"></script>
+<input type="text" onkeyup="
+  var start = this.selectionStart;
+  var end = this.selectionEnd;
+  this.value = this.value.toUpperCase();
+  this.setSelectionRange(start, end);
+">
