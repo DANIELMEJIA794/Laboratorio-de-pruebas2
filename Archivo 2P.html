@@ -10,21 +10,21 @@
         <header>
             <div class="logotipo">
             <img src="../imagenes/Leon3.jpg" width="50%" height="50%" alt="">
-             <nav>
-                <ul>
-                <li><a onclick="irPrimera()"  href="#">Inicio</a></li>
-                <li><a onclick="irSegunda()"  href="#">Acerca de</a></li>
-                <li><a onclick="mostrarListas(Listautores)" href="#" class="Menu">Servicios</a>
-                    <ul id="Listautores" style="display: none; color: back">
-                        <li><a href="#">AUTOR 1</a></li>
-                        <li><a href="#">AUTOR 2</a></li>
-                        <li><a href="#">AUTOR 3</a></li>
-                        <li><a href="#">AUTOR 4</a></li>
-                        <li><a href="#">AUTOR 5</a></li>
-                    </ul>
-                </li>
-                <li><a onclick="irCuarta()" a href="#">Contacto</a></li>
-                <li><a href="#" class="glyphicon glyphicon-search"></a></li>
+             <nav class="navegacion">
+                <ul class="menu">
+                    <li><a onclick="irPrimera()"  href="#">Inicio</a></li>
+                    <li><a onclick="irSegunda()"  href="#">Acerca de</a></li>
+                    <li><a  href="#" >Servicios</a>
+                        <ul class="submenu" id="Listautores">
+                            <li><a href="#">AUTOR 1</a></li>
+                            <li><a href="#">AUTOR 2</a></li>
+                            <li><a href="#">AUTOR 3</a></li>
+                            <li><a href="#">AUTOR 4</a></li>
+                            <li><a href="#">AUTOR 5</a></li>
+                        </ul>
+                    </li>
+                    <li><a onclick="irCuarta()" a href="#">Contacto</a></li>
+                    <li><a href="#" class="glyphicon glyphicon-search"></a></li>
             </nav>
             <!-- PONER AQUÍ LA SIDEBAR DE AUTORES O DE LIBROS, DE SER POSIBLE PONER DOS OPCIONES: UNA PARA AUTORES Y OTRA PARA LIBROS-->
             <!-- </div> -->

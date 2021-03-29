@@ -16,87 +16,6 @@ header, .main, footer {
     max-width:1000px;
     margin: 20px auto;
 }
-header nav {
-    height:auto;
-    padding:0;
-    background-color:black;
-    color:white;
-    list-style:none;
-    text-align:center;
-    display:inline-block;
-    overflow:hidden;
-}
-header nav ul {
-    color:white;
-    margin-right:5px;
-    padding: 10px;
-    text-decoration:none;
-    display:block;
-    text-align:center;
-    margin:auto;
-    }
-header nav ul li {
-    text-decoration:none;
-    display:block;
-   }
-header nav ul li a {
-    padding: 10px 20px;
-    margin-right:5px;
-    display:block;
-    text-align:center;
-    text-decoration:none;
-    color:white;
-    border: 1px solid grey;
-    position:relative;
-    /*CONTINUÁN LOS PROBLEMAS PARA CREAR UNA SIDEBAR FUNCIONAL*/
-}
-header nav ul li a:hover {
-    background: #ef8354;
-}
-header nav .menu {
-    display:flex;
-    padding:10px 20 px;
-    margin-right:5px;
-    color:white;
-    text-align:center;
-}
-header nav .menu:hover {
-    display:flex;
-    position:relative;
-    overflow-y:visible;
-}
-header nav .menu:hover a {
-    display:block;
-    position:relative;
-    overflow-y:visible;
-}
-header nav .item {
-    padding:10px 20px;
-    margin-right:5px;
-    display:none;
-    text-align:center;
-}
-header nav .item a {
-    display:block;
-}
-header nav .item:hover a {
-    display:block;
-}
-header nav .subitem {
-    display:none;
-    padding:10px 20px;
-    margin-right:5px;
-    text-align:center;
-}
-header nav .subitem:hover {
-    display:block;
-}
-header nav .subitem:hover a {
-    display:block;
-}
-header .Autor1 .Autor2 .Autor3 .Autor4 .Autor5 {
-    text-align:bottom;
-}
 
 .articles{
     display:flex;
@@ -155,29 +74,7 @@ header, .main, footer {
     max-width:1000px;
     margin: 20px auto;
 }
-header nav {
-    display: flex;
-    color: #5289D5;
-    overflow:hidden;
-}
-header nav ul {
-    list-style:none;
-}
-header nav ul li {
-    float:left;
-    list-style:none;
-}
-header nav ul li a {
-    padding: 10px 20px;
-    display:none;
-    color:white;
-    text-decoration:none;
-    float:left;
-    /*CONTINUÁN LOS PROBLEMAS PARA CREAR UNA SIDEBAR FUNCIONAL*/
-}
-header nav ul li a:hover {
-    background: #75acec;
-}
+
 .main .articles .primera {
     height:60%;
     margin:15px;
@@ -216,29 +113,7 @@ header, .main, footer {
     max-width:1000px;
     margin: 20px auto;
 }
-header nav {
-    display: flex;
-    color: #5289D5;
-    overflow:hidden;
-}
-header nav ul {
-    list-style:none;
-}
-header nav ul li {
-    float:left;
-    list-style:none;
-}
-header nav ul li a {
-    padding: 10px 20px;
-    display:none;
-    color:white;
-    text-decoration:none;
-    float:left;
-    /*CONTINUÁN LOS PROBLEMAS PARA CREAR UNA SIDEBAR FUNCIONAL*/
-}
-header nav ul li a:hover {
-    background: #75acec;
-}
+
 .main .articles {
     margin-right:1.5%;
     float:left;
@@ -275,29 +150,7 @@ header, .main, footer {
     max-width:1000px;
     margin: 20px auto;
 }
-header nav {
-    display: flex;
-    color: black;
-    overflow:hidden;
-}
-header nav ul {
-    list-style:none;
-}
-header nav ul li {
-    float:left;
-    list-style:none;
-}
-header nav ul li a {
-    padding: 10px 20px;
-    display:block;
-    color:white;
-    text-decoration:none;
-    float:left;
-    /*CONTINUÁN LOS PROBLEMAS PARA CREAR UNA SIDEBAR FUNCIONAL*/
-}
-header nav ul li a:hover {
-    background: #75acec;
-}
+
 .main .articles {
     margin-right:1.5%;
     float:left;
@@ -321,4 +174,56 @@ footer {
     clear:both;
     padding:10px 0px;
     text-align: center;
+}
+
+.navegacion{
+	width: 1000px;
+	margin: 30px auto;
+	background: black;
+}
+
+.navegacion ul{
+	list-style: none;
+    text-align: center;
+}
+
+.menu > li{
+	position: relative;
+	display: inline-block;
+}
+
+.menu > li > a{
+	display: block;
+	padding: 15px 20px;
+	color: white;
+	text-decoration: none;
+    border: 1px solid grey;
+}
+
+.menu li a:hover{
+	color: #75acec;
+	transition: all .3s;
+}
+
+/* Submenu*/
+
+.submenu{
+	position: absolute;
+	background: black;
+	width: 120%;
+	visibility: hidden;
+	opacity: 0;
+	transition: opacity 1.5s;
+}
+
+.submenu li a{
+	display: block;
+	padding-top: 15px;
+	color: #fff;
+	text-decoration: none;
+}
+
+.menu li:hover .submenu{
+	visibility: visible;
+	opacity: 1;
 }
