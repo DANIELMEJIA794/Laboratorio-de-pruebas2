@@ -157,7 +157,7 @@ form {
     width:300px;
     margin:0 auto;
 }
-.menu > li > form{
+.menu > li > form
     position: relative;
     align-items:baseline;
     display: inline-block;
