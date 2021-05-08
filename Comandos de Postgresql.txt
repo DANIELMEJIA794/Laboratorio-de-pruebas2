@@ -1,0 +1,684 @@
+CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
+select uuid_generate_v1();
+
+ALTER TABLE tabla_libros
+  ADD idlibro uuid;
+  
+ ALTER TABLE tabla_libros 
+	DROP COLUMN id; 
+ 
+ UPDATE public."tabla_categorías"
+	SET id=?, libro2=?, ejemplares=?, autor=?, idcategoria=?
+	WHERE <condition>;
+	
+	UPDATE public.tabla_categorías
+	SET idcategoria= uuid_generate_v1()
+	WHERE libro2= 'El palacio de la memoria';
+	
+	ALTER TABLE customers
+	ADD CONSTRAINT uniquectm_const UNIQUE (customer_id);
+	
+alter table tabla_categorías
+	add constraint uniquectm_const UNIQUE (idcategoria); 
+	
+	alter table tabla_categorías
+	add constraint uniquectm_const UNIQUE (idcategoria); 
+
+INSERT INTO public.tabla_libros(
+	"título", ejemplares, autor, "ubicación", idlibro)
+	VALUES (?, ?, ?, ?, ?);
+	
+UPDATE public.tabla_libros
+	SET idlibro= uuid_generate_v1()
+	WHERE título = 'El palacio de la memoria';
+	
+select * from tabla_libros
+
+UPDATE public.tabla_libros
+	SET idlibro= uuid_generate_v1();
+
+--INSERT idlibr =uuid_generate_v1();
+
+
+-- USO DEL WHERE Y LOS CONDICIONALES
+
+select * from tabla_libros where autor = 'Ciro Alegría';
+
+select * from tabla_libros where autor != 'Ciro Alegría';
+
+select * from tabla_libros where autor = 'Charles Dickens' and  ejemplares =  7;
+
+select * from tabla_libros where autor = 'Alan García' or ejemplares = 3;
+
+
+-- USO DEL DELETE
+
+delete from tabla_libros
+where título = 'Humillados y ofendidos';	
+
+
+-- USO DEL ALTER
+
+alter table tabla_libros 
+add column usuario varchar(50);
+
+alter table tabla_libros
+rename column usuario to lector;
+
+alter table tabla_libros
+drop column lector;
+
+update tabla_libros
+set usuarios = ('Rodrigo');
+
+alter table tabla_libros
+add column usuarios varchar(50);
+
+alter table tabla_libros
+alter column usuarios set not null;
+
+alter table tabla_libros
+alter column usuarios drop not null;
+
+alter table tabla_libros
+alter column usuarios type varchar(60);
+
+
+--- CLAVE PRIMARIA
+
+Select * from tabla_libros
+create table tabla_usuarios(
+	idusuario int not null
+	nombre varchar(50)
+	dirección varchar(50)
+	telefono varchar (50)
+	correo electrónico varchar (50)
+	primarykey (idlibro)
+	);
+	
+alter table tabla_libros
+add primarykey(idlibro);
+
+insert into tabla_libros values ('David Hidalgo', '6'. 'La biblioteca fantasma', 'Biblioteca Pedro Zulen', 'uuid_generate_v1() );
+NOTA: LA LLAVE PRIMARIA YA SE INSERTA DE FORMA AUTOMÁTICA EN LA TABLA
+
+
+-- AUTOINCREMENTAR LA CLAVE PRIMARIA
+
+create table tabla_prestamos(
+id prestamos serial primary key not null,
+	titulo varchar (50),
+	fecha préstamo varchar (50)
+	fecha devolución varchar (50),
+	ubicación varchar (50),
+);
+
+select * from tabla_prestamos;
+
+insert into tabla_prestamos (titulo, fecha prestamo, fecha devolución, ubicación);
+
+insert into tabla_prestamos (titulo, fecha prestamo, fecha devolución, ubicación);
+
+insert into tabla_prestamos (titulo, fecha prestamo, fecha devolución, ubicación);
+
+
+--- DROP Y TRUNCATE
+
+BORRAR TABLAS CUIDADO
+
+delete from tabla_prestamos;
+
+ENTONCES SE REINTRODUCOEN LOS DATOS DE INSERT PARA REHACER LA TABLA
+
+drop table tabla_prestamos;
+BORRA LA TABLA
+
+truncate tabla_prestamos;
+CONSERVA LA TABLA PERO ELIMINA LOS DATOS, NO ELIMINA LA CLAVE PRIMARIA SERIAL
+
+truncate table tabla_prestamos restart identity; 
+ELIMINA LOS DATOS PERO INICIA LA CLAVE PRIMARIA DESDE EL PRIMER VALOR (DESDE 1,2,3...). 
+SIRVE PARA LIMPIAR LA TABLA Y ESCRIBIR NUEVOS VALORES SIN INGRESAR NUEVOS VALORES
+
+
+--- VALORES POR DEFAULT
+
+select * from tabla_usuarios;
+
+insert into tabla_usuarios (nombre, direccion, telefono, correo electronico);
+
+create table tabla_usuarios(
+idusuario serial primary key not null,
+	nombre varchar (50),
+	direccion varchar (50),
+	telefono varchar (50) default 'desconocido',
+	correo electronico varchar (50) default 'desconocido'
+);
+	
+insert into tabla_usuarios (Josue, La Molina, 45550000, rx.gm@gmail.com);
+
+insert into tabla_usuarios (Felipe, Miraflores, 5856866585, felipe.aguayo@outlook.com);
+
+insert into tabla_usuarios (Juana, La Victoria, , juanirrauze@yahoo.com);
+
+DEBE DE APARECER DESCONOCIDO EN LA ENTRADA DE JUANA
+
+
+--- CONTAR CON LA TABLA
+
+select * from Planilla
+select Nombre, Salario, (salario + 1500) as Bono;
+
+SE ACEPTA + - * /
+
+BONO APARECE COMO UNA COLUMNA TEMPORAL.
+PARA MOSTRAR BONO EN EL SALARIO SE HACE:
+
+update planila set salario = salario + 1500
+where Nombre = 'Eduardo';
+
+Y AL SALARIO SE AÑADE LOS 1500 DEL BONO
+
+
+---- ORDER BY
+
+Select * from tabla_libros order by nombre;
+
+
+select * from tabla_libros order by titulo asc;
+
+select * from tabla_libros order by titulo desc;
+
+select * from tabla_libros order by 3;
+
+select * from tablas_libros order by nombre, titulo;
+
+PUEDE SER 
+
+select * from tablas_libros order by nombre, titulo asc;
+
+select * from tablas_libros order by nombre, titulo desc;
+
+ 
+-- LIKE 
+
+select * from tabla_libros
+where nombre like '%Al%;
+
+select  * from tabla_libros
+where autor like '%e%';
+
+DISTINGUIR ENTRE MINÚSCULAS Y MAYÚSCULAS
+
+select * from tabla_libros
+where autor like 'A%';
+
+BUSCA LA MAYÚSCULA "A"
+
+select * from tabla_libros
+where autor like '%o';
+
+BUSCA LA ÚLTIMA LETRA DEL TEXTO, LA LETRA "o"
+
+select * from tabla_libros 
+where nombre like '%d_%;
+
+BUSCA UN NOMBRE QUE TERMINA EN "d_"
+
+
+-- CONTAR REGISTROS
+
+select count(*) from tabla_libros;
+
+select count(nombre) from tabla_libros
+where nombre like '%o%';
+
+
+-- MÉTODO DE SUMA
+
+select * from planilla;
+ 
+select sum(salario) from planilla;
+
+SUMA TODAS LAS CIFRAS ESPECIFICADAS EN LA TABLA
+
+select sum(salario) from planilla
+where nombre like '%a%';
+
+SUMARÁ LOS SALARIOS DE NOMBRES CON LA LETRA "a" EN MINÚSCULAS
+
+
+-- FUNCIONES CON REGISTROS
+
+select * from planilla;
+
+select min(salario) from planilla;
+
+SELECCIONA EL VALOR MÍNIMO
+
+select max(salario) from planilla;
+
+SELECCIONA EL VALOR MÁXIMO
+
+select nombre, max(salario) from planilla
+group by nombre;
+
+PARA SELECCIONAR EN CASO DE QUE SE TENGAN NOMBRES REPETIDOS
+SOLO SALDRÁ EL NOMBRE CON EL MAYOR RESULTADO
+
+select  nombre, min(salario) from planilla
+group by nombre;
+
+ÍDEM, SALDRÁ EL NOMBRE CON EL MENOR RESULTADO
+
+---AVG AVERAGE
+SACA EL PROMEDIO DE UNA PLANILLA DE PAGO
+
+select * from planilla;
+
+select avg(salario) from planilla;
+
+select nombre avg(salario) from planilla
+group by nombre;
+
+SACA UN PROMEDIO POR CADA ENTRADA DE CADA TRABAJADOR
+SI SE TIENE DOS ENTRADAS EN nombre CON LA MISMA LETRA SE
+SUMAN Y SE LES SACA SU PROMEDIO
+
+
+--- HAVING
+
+select * from planilla;
+
+select nombre, salario  from planilla
+where nombre = 'Jose'
+group by nombre, salario
+having salario > 3000;
+
+SE ELIGIRÁN DOS ENTRADAS QUE COMIENZAN CON LA MISMA LETRA
+EN nombre Y SE ELIGIRÁ LA ENTRADA CON UN SALARIO MAYOR A 
+3000.
+
+select nombre, salario  from planilla
+group by nombre, salario
+having salario > 3000;
+
+ELIGE A TODA LA TABLA Y ELIGE LOS RESULTADOS QUE CUMPLAN CON LA CONDICIÓN
+(MAYOR QUE 3000)
+
+
+--- DISTINCT
+
+select * from tabla_libros
+select distinct autor from tabla_libros;
+
+select * from tabla libros
+select count(distinct autor) from tabla_libros;
+
+
+--- BETWEEN
+COMPARA RANGOS DE DATOS NUMÉRICOS
+
+select * from plantilla
+where salario between 2000 and 5000;
+
+MOSTRARÁ LOS VALORES DENTRO DEL RANGO DE 2000-5000
+
+select * from planilla
+where salario not between 2000 y 5000;
+
+MOSTRARÁ LOS DEMÁS VALORES EN LA TABLA
+
+--- UNIQUE
+
+select * from planilla
+alter table planilla
+add constraint uq_salario
+unique(salario);
+
+IMPIDE QUE SE PUEDAN INTRODUCIR NUEVOS VALORES CON INSERT, VALORES QUE YA EXISTAN EN LA TABLA
+
+
+--- DROP CONSTRAINT
+
+select * from planilla
+insert into planilla value ('Nicole'. 404, 3000);
+
+alter table planilla
+drop constraint uq_salario;
+
+PERMITE EDITAR UNA TABLA CON UNIQUE. LA LÍNEA DE INSERT AHORA FUNCIONA  
+
+
+---- FOREIGN KEY
+COMO RELACIONAR DOS TABLAS ¡IMPORTANTE!
+
+tabla_usuarios
+tabla_libros
+
+select * from tabla_libros;
+
+select * from tabla_usuarios;
+
+alter table tabla_libros
+add column idusuarios integer;
+
+
+alter tabla_libros
+add constraint FK idusuarios
+foreign key (idusuarios)
+references tabla_usuarios (idusuarios)
+update tabla_libros set idusuario = 'valor 1', 'valor 2', ...;
+
+PARA COMPROBAR SE PONE:
+
+insert into planilla values ('autor', 'titulo', 'ejemplares', 'ubicación');
+
+NO SE PUEDE INSERTAR AL VIOLAR LA LLAVE FORÁNEA QUE NO ESTÁ PRESENTE EN tabla_usuarios, DEBE INGRESARSE DATOS QUE SÍ ESTÉN PRESENTES
+EN LA TABLA tabla usuarios PARA INGRESAR DATOS A tabla_libros
+
+-- STORED
+
+select * from planilla
+create or replace planilla suma(int);
+create or replace planilla suma(num1, num2);
+return integer
+as
+$$
+Select num1 + num2
+$$
+language SQL;
+
+GUARDA LA INFORMACIÓN EN EL APARTADO FUNCTION DE SQL
+
+select suma('50' + '150');
+
+AHORA SE PUEDE PONER TODO VALOR QUE CUMPLA LA FUNCIÓN ELEGIDA
+
+create function BuscarSalario(varchar) return integer
+as
+$$
+select salario from planilla
+where nombre = $1
+$$
+Language SQL;
+
+select BuscarSalario('Eduardo');
+
+ENCUENTRA EL SALARIO DE EDUARDO
+
+
+-- FUNCTION
+ 
+create function InsertarPersonas () return void
+as
+$$
+insert into planilla values('nombre1', 'idprimarykey1', 'salario1');
+insert into planilla values('nombre2', 'idprimarykey2', 'salario2');
+insert into planilla values('nombre2', 'idprimarykey3', 'salario3');
+$$
+langague SQL
+
+select insertarpersonas();
+
+select * from planilla;
+
+INSERTA NUEVOS DATOS A LA TABLA YA CREADA
+
+create function buscarinfo(int) return planilla
+as
+$$
+select * from planilla
+where nid=$1;  
+$$
+
+select buscarinfo(1)
+
+DA LOS RESULTADOS DE LA ENTRADA CON IDPRIMARYKEY 1('Eduardo',3000) [NOMBRE Y SALARIO]
+
+
+--- TOP
+
+select * from plantilla
+limit(5)
+
+DEVUELVE LOS PRIMEROS 5 REGISTROS EN LA TABLA 'PLANILLA'
+
+
+---  TRIGGER
+
+TRIGGER + BEFORE
+
+select * from planilla;
+select * from 'log_triggers';
+create function SP_test() return trigger
+$$
+begin
+insert into 'log_triggers' values (old.nombre, old.nid, old.salario)
+---TOMA LOS DATOS DE LA TABLA PLANILLA Y LO INSERTA EN LA TABLA 'LOG_TRIGGERS'
+return new;
+---ASÍ SE ACTIVA LA ACCIÓN DE TRIGGER
+
+
+end
+$$
+language PLPSQL;
+
+create trigger TR_update before update on planilla
+for each row
+execute procedure SP_test();
+
+SE CREA LA NUEVA FUNCIÓN DE TRIGGER EN EL PLPSQL Y ESTÁ LISTA PARA MODIFICAR LA TABLA DE 'PLANILLA'
+
+update planilla set
+nombre = 'Eduardo'
+nid = ''
+salario = ''
+where nombre='Eduardo'
+
+SE INTRODUCEN NUEVOS DATOS EN LA ENTRADA DE 'EDUARDO', LA CUAL SE MUESTRA AISLADA
+
+
+TRIGGER + AFTER
+
+select * from planilla;
+select * from 'log_triggers';
+
+
+create function SP_TR_insert return trigger
+as
+$$
+declare
+usuario varchar (250):= user;
+fecha (date):= current_date;
+tiempo (time):=current_time;
+begin
+insert values(new.nombre, new.nid, new.salario, usuario, fecha, tiempo)
+return new;
+end
+$$
+language plpsql;
+
+create trigger TR_Insert after insert on planilla
+for each row
+execute procedure SP_TR_insert();
+
+insert into planilla('Gregorio','nuevonid','nuevosalario')
+
+-- ADVERTENCIA: SALARIO Y NID SON VALORES NUMÉRICOS INTEGER, NO VALORES VARCHAR DE LETRAS
+
+SE CREA UN NUEVO REGISTRO, NO SE REEMPLAZAN DATOS DE UN REGISTRO YA EXISTENTE. SE INDICA EN CUAL USUARIO HIZO LA MODIFICACIÓN DE LA TABLA 
+Y EN QUE FECHA Y HORA SE REALIZÓ LA MODIFICACIÓN.
+
+
+-- IN
+
+select * from planilla
+where nid = '1' or nid='2' or nid ='11';
+
+select * from planilla
+where nid in ('1','2''11');
+
+
+CONSIGUE TODOS LOS RESULTADOS EN LOS QUE NID = '1','2','11' SIN 'OR'
+
+
+--- LIMIT Y OFFSET
+
+select * from planilla limit 3
+
+CONSIGUE LOS TRES PRIMEROS RESULTADOS
+
+select * from planilla limit 3 offset 4
+
+CONSIGUE 3 RESULTADOS PERO CUENTA DESDE EL CUARTO REGISTRO
+
+
+---  VIEW
+
+select * from planilla
+
+(APARTE)
+create view view_datafrompersona
+as select nombre,nid from planilla;
+
+select * from view_datafrompersona;
+
+MUESTRA LA TABLA CON LOS DATOS DE NOMBRE Y NID, EXCLUYE LA INFORMACIÓN DEL CAMPO 'SALARIO'
+VIEW SIRVE PARA FILTRAR LA INFORMACIÓN QUE SE VE EN LA TABLA.
+
+
+--- CONSULTA DE DOS O MÁS TABLAS CON UNION
+
+select * from planilla;
+select * from persona;
+
+create view view_union
+union as 
+select nombre, nid from planilla
+union 
+select nombre, idpersona from persona; 
+
+
+EL CÓDIGO FUSIONA LAS TABLAS EN UNA SOLA PERO UNE LAS ENTRADAS CON DATOS DUPLICADOS
+
+
+create view view_union
+as
+select nombre, nid from planilla
+union all
+select nombre, idpersona from persona;
+
+EL CÓDIGO AHORA FUSIONA LAS TABLAS EN UNA SOLA CON DATOS DUPLICADOS.
+UN 'EDUARDO' DE UNA TABLA SE REPRESENTA DE FORMA INDEPENDIENTE JUNTO AL 'EDUARDO' DE LA OTRA TABLA
+
+
+create view view_union
+as 
+select nombre, nid, 'tabla_planilla' as origin from tabla_planilla
+union all
+select nombre, nid, 'tabla_persona' from tabla_persona
+
+CREA UNA TABLA COMPUESTA EN LA QUE SE INDICA EL ORIGEN DE CADA ENTRADA POR TABLA RESPECTIVA
+
+create view view_union
+as 
+select nombre, nid, 'tabla_planilla' as origin from tabla_planilla
+union all
+select nombre, nid, 'tabla_persona' from tabla_persona;
+order by origin;
+
+select * from view_union;
+
+LA TABLA MUESTRA LOS RESULTADOS POR ORIGEN DE TABLA DE NUEVO, 
+CON ENTRADAS REPETIDAS O SIMILARES
+
+
+--- INNER JOIN
+
+select * from planilla;
+select * from persona;
+
+
+select * from planilla
+inner join persona
+on planilla.nid, = persona.idpersona;
+
+CREA UNA ENTRADA CONJUNTA UNIDOS POR FACTORES COMUNES COMO LLAVES
+EN ESTE CASO nid y idpersona PERO MOSTRARÁ ENTRADAS REPETIDAS (QUE TENGAN DATOS SIMILARES
+COMO EL CASO DE 'nombre')
+
+select * from planilla as a1
+inner join persona as b1
+on a1.nid, = b1.idpersona;
+
+select * from planilla as a1
+inner join persona as b1
+where a1.nid, = b1.idpersona;
+
+DAN EL MISMO RESULTADO QUE EN EL CASO ANTERIOR
+
+
+--- LEFT JOIN
+
+select * from planilla:
+select * from persona;
+
+select * from planilla as a1
+left join * from planilla as b1
+on a1.nid = b1.idpersona;
+
+CREA UNA TABLA CONJUNTA Y PRIORIZA LOS DATOS DE LA TABLA DE LA IZQUIERDA (planilla)
+
+select * from planilla as a1
+left outer join * from planilla as b1
+on a1.nid = b1.idpersona;
+
+ES OTRA FORMA DE ESCRIBIRLO
+
+
+---  RIGHT JOIN
+
+select * from planilla;
+select * from persona;
+
+select * from planilla as a1
+right join * from planilla as b1
+on a1.nid = b1.idpersona;
+
+select * from planilla as a1
+right outer join * form planilla as b1
+on a1.nid = b1.idpersona;
+
+EN ESTE CASO SE PRIORIZA LOS DATOS DE LA TABLA DE LA DERECHA (persona)
+
+
+- FULL JOIN
+
+select * from planilla;
+select * from persona;
+
+select * from planilla as a1
+full join from persona as b1
+on a1.nid = b1.idpersona;
+
+MUESTRA TODA LA TABLA. LOS CAMPOS VACÍOS MOSTRARÁN NULL
+
+select * from planilla as a1
+full outer join from persona as b1
+on a1.nid = b1.idpersona
+
+ES OTRA FORMA DE ESCRIBIRLO
+
+
+--- CROSS JOIN
+
+select * from planilla
+select * from persona
+
+select * from planilla as a1
+crossl join * from persona as b1
+on a1.nid = b1.idpersona
+
+MUESTRA TODAS LAS COMBINACIONES DE LOS DATOS DE AMBAS TABLAS, REPITE MUCHO LOS DATOS
+
